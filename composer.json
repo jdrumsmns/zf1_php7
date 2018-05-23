@@ -1,0 +1,36 @@
+{
+    "name": "jdrumsmns/zf1_php7",
+    "description": "Zend Framework 1 fixed for php 7.2+",
+    "type": "library",
+    "keywords": [
+        "framework",
+        "zf1",
+        "php7"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.2.11"
+    },
+    "autoload": {
+        "psr-0": {
+            "Zend_": "zendframework1/library/"
+        }
+    },
+    "include-path": [
+        "zendframework1/library/"
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.12.x-dev"
+        }
+    },
+    "require-dev": {
+    },
+    "archive": {
+        "exclude": ["/demos", "/documentation", "/tests"]
+    }
+}
