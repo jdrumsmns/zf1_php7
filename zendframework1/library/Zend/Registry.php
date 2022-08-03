@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Zend Framework
  *
@@ -203,7 +204,10 @@ class Zend_Registry extends ArrayObject
      */
     public function offsetExists($index)
     {
-        return array_key_exists($index, $this);
+        if (is_array($this)) {
+            return isset($this[$index]);
+        } else {
+            return (bool) @$this->$index;
+        }
     }
-
 }
